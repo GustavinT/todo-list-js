@@ -171,10 +171,61 @@ li button:hover {
 }
 
 /* ===== Desktop ===== */
-@media (min-width: 768px) {
+@media (max-width: 480px) {
   body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 16px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #task-counter {
+    font-size: 0.8rem;
+  }
+
+  /* FILTROS */
+  .filters {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .filters button {
+    flex: 1;
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  /* FORM */
+  form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* LISTA */
+  li {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  li span {
+    font-size: 0.9rem;
+    word-break: break-word;
   }
 }
