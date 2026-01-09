@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+
+  /* Mobile first */
+  padding: 20px;
+}
+
+/* ===== Card ===== */
+.container {
+  background: #ffffff;
+  color: #111827;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* ===== Título ===== */
+.container h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+/* ===== Contador ===== */
+#task-counter {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ===== Filtros ===== */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.filters button {
+  background: transparent;
+  border: 1px solid #cbd5f5;
+  color: #1e293b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+/* ===== Form ===== */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ===== Lista ===== */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 6px;
+  border-bottom: 1px solid #e5e7eb;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+/* Checkbox */
+li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Texto */
+li span {
+  flex: 1;
+  font-size: 0.95rem;
+
+  /* ESSENCIAL */
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Botão remover */
+li button {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+li button:hover {
+  transform: scale(1.2);
+}
+
+/* Concluída */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
